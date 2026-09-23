@@ -33,3 +33,5 @@ dotnet run --project .\MintLauncher.Tests\MintLauncher.Tests.csproj -c Release
 未选择皮肤时，首页以代码定义的纯色材质渲染薄荷色 3D 人偶，不内置 Minecraft 或第三方皮肤图片；Steve/Alex 选项仅切换手臂宽度。人偶待机时轻微转身、摆头、摆臂；按住角色拖动可从侧面查看。用户可选择本地 PNG 预览自己的皮肤，但不会自动上传到 Minecraft 账户。未经授权的皮肤图片不随源码发布。
 
 实际安装和启动使用 [CmlLib.Core](https://github.com/CmlLib/CmlLib.Core) 4.0.6（MIT）；微软登录使用 [CmlLib.Core.Auth.Microsoft](https://github.com/CmlLib/CmlLib.Core.Auth.Microsoft) 与 MSAL；Fabric 自动补全读取 [Fabric Meta 官方 API](https://github.com/FabricMC/fabric-meta)。PCL、HMCL 源码只用于研究目录格式，未复制到本项目。项目与 Mojang、Microsoft、FabricMC、PCL 和 HMCL 官方均无隶属关系。
+
+项目维护者为 [RiegaLee](https://github.com/RiegaLee)；联系邮箱为 [Riegalee@outlook.com](mailto:Riegalee@outlook.com)。

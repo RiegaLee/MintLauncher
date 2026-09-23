@@ -10,4 +10,4 @@
 
 构建需要 Windows 和 .NET 10 SDK。项目代码在 [`MintLauncher/`](MintLauncher/)，详细功能与限制见[项目说明](MintLauncher/README.md)。仓库按 GPL-3.0 发布；第三方依赖声明见 [`THIRD_PARTY_NOTICES.txt`](MintLauncher/THIRD_PARTY_NOTICES.txt)。本仓库不包含游戏本体、下载缓存、用户账户数据或授权未确认的第三方皮肤图片。
 
-项目维护者：[RiegaLee](https://github.com/RiegaLee)。公开问题反馈请使用 [GitHub Issues](https://github.com/RiegaLee/MintLauncher/issues)，不要在 Issue 中发布账户信息、令牌或其他隐私数据。
+项目维护者：[RiegaLee](https://github.com/RiegaLee)。项目联系邮箱：[Riegalee@outlook.com](mailto:Riegalee@outlook.com)。公开问题反馈也可使用 [GitHub Issues](https://github.com/RiegaLee/MintLauncher/issues)，不要在 Issue 中发布账户信息、令牌或其他隐私数据。
