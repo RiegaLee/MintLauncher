@@ -1,0 +1,31 @@
+# Build output and local tooling state
+**/bin/
+**/obj/
+**/TestResults/
+.vs/
+.vscode/
+.idea/
+dist/
+*.user
+*.suo
+*.log
+
+# Local accounts, credentials, and machine-specific configuration
+.env
+.env.*
+**/workspace.json
+**/appearance.json
+**/accounts.json
+**/secrets.json
+
+# Reference checkouts are not part of this project
+CmlLib-upstream/
+HMCL-upstream/
+PCL-upstream/
+
+# Licensing for this user-selected third-party skin is unconfirmed
+MintLauncher/Assets/namemc-74d651789a3c2405.png
+
+# Previously used Minecraft default skins are kept locally only pending rights review
+MintLauncher/Assets/steve-default.png
+MintLauncher/Assets/alex-default.png

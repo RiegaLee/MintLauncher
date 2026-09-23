@@ -1,0 +1,136 @@
+<Application x:Class="MintLauncher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <Application.Resources>
+        <SolidColorBrush x:Key="TextPrimary" Color="#17283B" />
+        <SolidColorBrush x:Key="TextSecondary" Color="#60788E" />
+        <SolidColorBrush x:Key="BrandBlue" Color="#1686DA" />
+        <SolidColorBrush x:Key="BrandMint" Color="#69D3C5" />
+        <SolidColorBrush x:Key="WindowSurface" Color="#F7FBFE" />
+        <SolidColorBrush x:Key="WindowBorder" Color="#35FFFFFF" />
+        <SolidColorBrush x:Key="TitleBarSurface" Color="#48FFFFFF" />
+        <SolidColorBrush x:Key="NavSelectedSurface" Color="#EFFFFFFF" />
+        <SolidColorBrush x:Key="NavHoverSurface" Color="#120D609C" />
+        <SolidColorBrush x:Key="SoftSurface" Color="#EFFFFFFF" />
+        <SolidColorBrush x:Key="SoftHoverSurface" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="InstancePillSurface" Color="#A9FFFFFF" />
+        <SolidColorBrush x:Key="ModalSurface" Color="#FBFFFFFF" />
+        <SolidColorBrush x:Key="SelectionSurface" Color="#ECF7FF" />
+        <SolidColorBrush x:Key="SecondarySurface" Color="#F7FAFC" />
+        <SolidColorBrush x:Key="SectionSurface" Color="#D9FFFFFF" />
+        <SolidColorBrush x:Key="TileBlueSurface" Color="#EFF8FF" />
+        <SolidColorBrush x:Key="TileMintSurface" Color="#F0FAF7" />
+        <SolidColorBrush x:Key="TilePinkSurface" Color="#FFF3F7" />
+        <SolidColorBrush x:Key="IconBlueSurface" Color="#D8EEFF" />
+        <SolidColorBrush x:Key="IconMintSurface" Color="#DDF5EE" />
+        <SolidColorBrush x:Key="IconPinkSurface" Color="#FFE0E9" />
+        <SolidColorBrush x:Key="AvatarSurface" Color="#FFE3EA" />
+        <SolidColorBrush x:Key="AvatarText" Color="#486073" />
+        <SolidColorBrush x:Key="IconMuted" Color="#7890A5" />
+        <SolidColorBrush x:Key="StatusText" Color="#678097" />
+        <SolidColorBrush x:Key="DimmerSurface" Color="#3814273A" />
+        <SolidColorBrush x:Key="LaunchTrack" Color="#251686DA" />
+        <SolidColorBrush x:Key="HomePreviewSurface" Color="#FFF8FCFF" />
+        <LinearGradientBrush x:Key="BackdropOverlay" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#F4F9FE" Offset="0" />
+            <GradientStop Color="#DDEFFB" Offset="0.48" />
+            <GradientStop Color="#DAF5F0" Offset="1" />
+        </LinearGradientBrush>
+        <sys:Double x:Key="BackdropImageOpacity">0.20</sys:Double>
+
+        <Style TargetType="Image">
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+        </Style>
+
+        <Style x:Key="IconButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Margin" Value="3,0" />
+            <Setter Property="Foreground" Value="#557188" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Surface" Property="Background" Value="{DynamicResource NavHoverSurface}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Surface" Property="Opacity" Value="0.65" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="NavButtonStyle" TargetType="RadioButton">
+            <Setter Property="Height" Value="42" />
+            <Setter Property="Width" Value="112" />
+            <Setter Property="Margin" Value="3,0" />
+            <Setter Property="Padding" Value="20,0" />
+            <Setter Property="Foreground" Value="#60788E" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="Surface" Background="Transparent" CornerRadius="10"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Surface" Property="Background" Value="{DynamicResource NavHoverSurface}" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" Value="{DynamicResource TextPrimary}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SoftButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource SoftSurface}" />
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Surface" Property="Background" Value="{DynamicResource SoftHoverSurface}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Surface" Property="Opacity" Value="0.86" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

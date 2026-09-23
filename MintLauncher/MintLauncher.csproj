@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MintLauncher</AssemblyName>
+    <AssemblyTitle>薄荷启动器</AssemblyTitle>
+    <Company>薄荷启动器</Company>
+    <ApplicationIcon>Assets\mint-brandmark-v1.ico</ApplicationIcon>
+    <Product>薄荷启动器</Product>
+    <Description>薄荷启动器：Minecraft 启动与游戏目录导入</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="MintLauncher.Tests" />
+    <PackageReference Include="CmlLib.Core" Version="4.0.6" />
+    <PackageReference Include="CmlLib.Core.Auth.Microsoft" Version="3.3.1" />
+    <PackageReference Include="XboxAuthNet.Game.Msal" Version="0.1.3" />
+    <Resource Include="Assets\mint-icon.png" />
+    <Resource Include="Assets\mint-head-clean-v2.png" />
+    <Resource Include="Assets\mint-background.png" />
+    <Resource Include="Assets\mint-appicon-v1.png" />
+    <Resource Include="Assets\mint-appicon-v1.ico" />
+    <Resource Include="Assets\mint-brandmark-v1.png" />
+    <Resource Include="Assets\mint-brandmark-v1.ico" />
+  </ItemGroup>
+</Project>
