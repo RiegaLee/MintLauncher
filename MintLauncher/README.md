@@ -26,7 +26,7 @@ dotnet run --project .\MintLauncher.Tests\MintLauncher.Tests.csproj -c Release
 
 微软应用注册使用个人 Microsoft 账户类型和“移动和桌面应用”平台，回调 URI 为 `http://localhost`；客户端 ID 已写入启动器，无需客户端密钥。账户和令牌只保存在当前 Windows 用户的 `%LOCALAPPDATA%\MintLauncher` 中，不随源码提交。首次登录会打开系统浏览器，微软页面由用户自行完成登录和授权。
 
-当前应用注册已通过微软网页登录与本机回调测试，但 Minecraft Services 返回 HTTP 403。下一步是向 Minecraft 的 [AppID Review 表单](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-ajEQ1td1ROpz00KtS8Gd5UNVpPTkVLNFVROVQxNkdRMEtXVjNQQjdXVC4u) 申请审核，而不是改用其他启动器的客户端 ID。表单要求联系邮箱、应用名称、客户端 ID、租户 ID、公开介绍网址和用途说明，并要求申请人确认已阅读 EULA 与使用准则；不要提交账户密码、OAuth 授权码或令牌。审核通过前可继续使用离线档案，但它不能进入要求正版验证的服务器。
+当前应用注册已通过微软网页登录与本机回调测试，但 Minecraft Services 返回 HTTP 403。已向 Minecraft 的 AppID Review 提交应用 ID 审核申请，尚未获批；不会改用其他启动器的客户端 ID。审核通过前可继续使用离线档案，但它不能进入要求正版验证的服务器。
 
 ## 素材和依赖
 
